@@ -38,21 +38,27 @@ document.onkeyup = function (event) {
     // User picks a letter and sets it to lowercase
     var userGuess = event.key.toLowerCase();
     console.log(userGuess);
-
+    
+    // Makes sure that the user can't pick the same letter
     if (guesses.includes(userGuess) === false) {
-
+        // Add the userGuess to the guesses array
         guesses.push(userGuess);
-
+        // Adds the user's guess letter to the Guesses so far list
         guessText.textContent +=userGuess + " ";
-
+        // Create a way to compare the user's choice letter with the bandname.
         if (userGuess.indexOf(randomBand) > -1) {
 
+            // If a letter matches a letter in the band name, the letter gets added to the page and replaces a _ and guesses left reduced by 1
 
+            // If all letters match, + 1 gets added to wins and game resets
         }
+            // If letter does not match, then number of guesses reduced by 1
 
-        
+            // If all guesses are used up, + 1 gets added to losses and game resets
     }
 
+    
+    
 
 
 
